@@ -1,7 +1,7 @@
 # Dialog Inpainting: Turning Documents into Dialogs
 
 ## Abstract
-Many important questions (e.g. ``How to eat healthier?'') require conversation to establish context and explore in depth.
+Many important questions (e.g. "How to eat healthier?") require conversation to establish context and explore in depth.
 However, conversational question answering (ConvQA) systems have long been stymied by scarce training data that is expensive to collect.
 To address this problem, we propose a new technique for synthetically generating diverse and high-quality dialog data: *dialog inpainting*.
 Our approach takes the text of any document and transforms it into a two-person dialog between the writer and an imagined reader:
@@ -15,7 +15,10 @@ This is not an officially supported Google product.
 
 # `WikiDialog-OQ`
 
-We are making WikiDialog-OQ publicly available; the dataset contains 11M information-seeking conversations from passages in English Wikipedia. Each conversation was generated using the dialog inpainting method detailed in the paper using the `Inpaint-OQ` inpainter model, a T5-XXL model that was fine-tuned on `OR-QuAC` and `QReCC` using a dialog reconstruction loss. The passages come from the `OR-QuAC` dataset and share passage ids.
+We are making `WikiDialog-OQ`, a dataset containing 11M information-seeking conversations from passages in English Wikipedia, publicly available.
+Each conversation was generated using the dialog inpainting method detailed in the paper using the `Inpaint-OQ` inpainter model, a T5-XXL model that was fine-tuned on `OR-QuAC` and `QReCC` using a dialog reconstruction loss.
+The passages come from the `OR-QuAC` retrieval corpus and share passage ids.
+You can download the `OR-QuAC` dataset and find more details about it [here](https://github.com/prdwb/orconvqa-release).
 
 ## Accessing the dataset
 
