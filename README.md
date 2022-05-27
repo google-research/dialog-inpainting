@@ -22,14 +22,27 @@ You can download the `OR-QuAC` dataset and find more details about it [here](htt
 
 ## Accessing the dataset
 
-The dataset can be downloaded in raw JSON format here (TODO), or accessed via TFDS using the following snippet:
+The dataset can be downloaded in raw JSON format from [Google Cloud](), or accessed via [TFDS](https://www.tensorflow.org/datasets/catalog/wiki_dialog) using the following snippet:
 
 ```
 >>> import tensorflow_datasets as tfds
->>> ds = tfds.load('wikidialog/oq')
+>>> ds = tfds.load('wiki_dialog/oq')
 >>> # Print the first example from the dataset
 >>> print(next(iter(ds)))
 ```
 
+Note: This may require [the nightly build of TFDS](https://www.tensorflow.org/datasets/overview#installation).
+
 ## Data card (TODO)
 
+## Citing WikiDialog
+
+```
+@inproceedings{dai2022dialoginpainting,
+  title={Dialog Inpainting: Turning Documents to Dialogs},
+  author={Dai, Zhuyun and Chaganty, Arun Tejasvi and Zhao, Vincent and Amini, Aida and Green, Mike and Rashid, Qazi and Guu, Kelvin},
+  booktitle={International Conference on Machine Learning (ICML)},
+  year={2022},
+  organization={PMLR}
+}
+```
