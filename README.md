@@ -20,18 +20,24 @@ Each conversation was generated using the dialog inpainting method detailed in t
 The passages come from the `OR-QuAC` retrieval corpus and share passage ids.
 You can download the `OR-QuAC` dataset and find more details about it [here](https://github.com/prdwb/orconvqa-release).
 
-## Accessing the dataset
+## Download the raw JSON format data.
 
-The dataset can be downloaded in raw JSON format from [Google Cloud](), or accessed via [TFDS](https://www.tensorflow.org/datasets/catalog/wiki_dialog) using the following snippet:
+The dataset can be downloaded in raw JSON format from [Google Cloud]().
 
+## Download the processed dataset via [TFDS](https://www.tensorflow.org/datasets/catalog/wiki_dialog).
+
+First, install the [`tfds-nightly`](https://www.tensorflow.org/datasets/overview#installation) package and other dependencies.
+
+```bash
+pip install -q tfds-nightly tensorflow apache_beam
 ```
+
+After installation, load the `WikiDialog-OQ` dataset using the following snippet:
+```python
 >>> import tensorflow_datasets as tfds
->>> ds = tfds.load('wiki_dialog/oq')
->>> # Print the first example from the dataset
->>> print(next(iter(ds)))
+>>> dataset, info = tfds.load('wiki_dialog/OQ', with_info=True)
+>>> info
 ```
-
-Note: This may require [the nightly build of TFDS](https://www.tensorflow.org/datasets/overview#installation).
 
 ## Data card (TODO)
 
